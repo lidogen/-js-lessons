@@ -1,0 +1,168 @@
+
+
+<meta charset="utf-8">
+<script type="text/javascript">
+
+
+		// 1. Почему код даёт именно такие результаты?
+
+	// let a = 1,
+	//     b = 1,
+	//     c, d;
+	//
+	// c = ++a;
+	// alert(c);         // 2 префиксный инкремент увеличит на 1 значение a и присвоит с
+	//
+	// d = b++;
+	// alert(d);         // 1 постфиксный инкремент увеличит на 1 значение, но вернет не сразу а при след. вызове, т.е. тут d будет присвоено текущее значение b
+	//
+	// c = (2 + ++a);
+	// alert(c);         // 5 текущее значение a = 2 + 1(префиксный инкремент) + 2
+	//
+	//
+	// d = (2+ b++);
+	// alert(d);         // 4 текущее значение b = 2 + 2, так как используется постфиксный инкремент b увеличиться на 1 при след. обращении
+	//
+	// alert(a);        // 3 текущее значение a = 3 с учетом всех ранее выполненых операций над a
+	// alert(b);        // 3 текущее значение b = 3 с учетом всех ранее выполненых операций над b -->
+
+
+
+	// 2. Чему будет равен x в примере ниже?
+	// let a = 2;
+	// let x = 1 + (a *= 2); // сокращенная форма a = a * 2, x = 5 потому что здесь умножение с присвоением
+
+
+
+	/* 3. Объявить две целочисленные переменные a и b и задать им произвольные начальные значения. Затем написать скрипт, который работает по следующему принципу:
+	если a и b положительные, вывести их разность;
+	если а и b отрицательные, вывести их произведение;
+	если а и b разных знаков, вывести их сумму;
+	ноль можно считать положительным числом.
+	*/
+
+	// let a = 8;
+	// let b = 9;
+	//
+	// if (a > 0 && b > 0) {
+	//    if (b>a) {
+	// 	   let	c = b - a;
+	// 	   console.log(c);
+	//    }else {let	c = a - b;
+	// 	   console.log(c);
+	// 	   }
+	//    }
+	// if (a < 0 && b < 0) {
+	//    let	c = a * b;
+	// 	   console.log(c);
+	// }
+	// if (a < 0 && b > 0 || a > 0 && b < 0) {
+	//    let	c = a + b;
+	// 	   console.log(c);
+	// }
+
+	// 4. Присвоить переменной а значение в промежутке [0..15]. С помощью оператора switch организовать вывод чисел от a до 15.
+	let a = 1;
+	switch (a){
+	  case 0:
+	    console.log(a++);
+
+	  case 1:
+	    console.log(a++);
+
+	  case 2:
+	    console.log(a++);
+
+	  case 3:
+	    console.log(a++);
+
+	  case 4:
+	    console.log(a++);
+
+	  case 5:
+	    console.log(a++);
+
+	  case 6:
+	    console.log(a++);
+
+	  case 7:
+	    console.log(a++);
+
+	  case 8:
+	    console.log(a++);
+
+	  case 9:
+	    console.log(a++);
+
+	  case 10:
+	    console.log(a++);
+
+	  case 11:
+	    console.log(a++);
+
+	  case 12:
+	    console.log(a++);
+
+	  case 13:
+	    console.log(a++);
+
+	  case 14:
+	    console.log(a++);
+
+	  case 15:
+	    console.log(a);
+	    break;
+
+	  default:
+	    console.log('Error: a должно быть от 0 до 15');
+	    break;
+	}
+
+	// 5. Реализовать основные 4 арифметические операции в виде функций с двумя параметрами. Обязательно использовать оператор return.
+
+	function multi(a, b){
+	  return a * b;
+	}
+
+	function sum(a, b){
+	  return a + b;
+	}
+
+	function diff(a, b){
+	  return Math.abs(a - b);
+	}
+
+	function division(a, b){
+		return a / b;
+      }
+
+	console.log(multi(5, 3));
+	console.log(sum(3, 4));
+	console.log(diff(4, 5));
+	console.log(division(6, 3));
+
+	/* 6. Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation), где arg1, arg2 – значения аргументов, operation – строка с названием операции. В зависимости от переданного значения операции выполнить одну из арифметических операций (использовать функции из пункта 3) и вернуть полученное значение (использовать switch).
+	*/
+
+	function mathOperation(arg1, arg2, operation){
+
+	  switch(operation){
+	    case 'multi':
+	      return multi(arg1, arg2);
+	    case 'sum':
+	      return sum(arg1, arg2);
+	    case 'diff':
+	      return diff(arg1, arg2);
+	    case 'division':
+	      return division(arg1, arg2);
+	    default:
+	      return 'Вы можете использовать следующие операции:\n-multi;\n-sum\n-diff\n-division';
+	  }
+	}
+
+	console.log(mathOperation());
+	console.log(mathOperation(5, 2, 'multi'));
+	console.log(mathOperation(5, 2, 'sum'));
+	console.log(mathOperation(5, 1, 'diff'));
+	console.log(mathOperation(5, 1, 'division'));
+</script>
