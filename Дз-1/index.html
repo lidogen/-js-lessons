@@ -1,14 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<body>
 
-<meta charset="utf-8">
-<script type="text/javascript">
+	<script type="text/javascript">
+		'use strict';
+		let t_grad = prompt ('Введите температурное значение в градусах по Цельсию');
 
- let t_grad = prompt ('Введите температурное значение в градусах по Цельсию');
+		let t_far = t_grad * 1.8 + 32;
+		alert  ('По Фаренгейту это же температурное значение составит'+' ( '+ t_far +' ) '+'градусов');
 
-	t_far = t_grad * 1.8 + 32;
-	alert  ('По Фаренгейту это же температурное значение составит'+' ( '+ t_far +' ) '+'градусов');
+		let name = "Василий"
+		let admin = name
 
-	let name = "Василий"
-	let admin = name
-
-	alert (admin)
-</script>
+		alert (admin);
+	</script>
+</body>
+</html>
