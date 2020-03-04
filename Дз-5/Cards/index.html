@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+	<script type="text/javascript">
+		'use strict';
+
+		function changePicture(obj) {
+			let parent = obj.parentNode;
+			let condition_1 = parent.querySelector('img').style.display;
+			let condition_2 = parent.querySelector('p').style.display;
+
+			if (condition_1 == "none" && condition_2 == "block") {
+				parent.querySelector('img').style.display = "block";
+				parent.querySelector('p').style.display = "none";
+			}else
+			parent.querySelector('img').style.display = "none";
+			parent.querySelector('p').style.display = "block";
+		}
+	</script>
+
+	<section class="СardBoard">
+		<div class="product">
+			<div class="product__name">
+				<h3>Blue hope</h3>
+			</div>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<img src="./img/3.jpg" alt="">
+			<input type="submit" name="" value="Подробнее" onclick="changePicture(this)">
+		</div>
+		<div class="product">
+			<div class="product__name">
+				<h3>Blue diamond</h3>
+			</div>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<img src="./img/2.jpg" alt="">
+			<input type="submit" name="" value="Подробнее" onclick="changePicture(this)">
+		</div>
+		<div class="product">
+			<div class="product__name">
+				<h3>Blue alchemist</h3>
+			</div>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<img src="./img/1.jpg" alt="">
+			<input type="submit"  name="" value="Подробнее" onclick="changePicture(this)">
+		</div>
+	</section>
+</body>
+</html>

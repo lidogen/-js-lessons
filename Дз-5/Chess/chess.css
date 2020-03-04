@@ -1,0 +1,16 @@
+html {
+	background: #ccc;
+}
+
+body {
+    margin: 30px 407px;
+}
+
+table {
+	border-collapse: collapse;
+	background: #fff;
+}
+td {
+	text-align: center;
+	border: 1px solid #000;
+}
