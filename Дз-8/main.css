@@ -1,0 +1,26 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+canvas {
+	display: block;
+	background: #250e69;;
+    position: relative;
+	left: calc(50% - 350px);
+}
+.hint {
+    width: 300px;
+    position: absolute;
+    top: 500px;
+    right: calc(50% - 150px);
+    color: wheat;
+    font-size: 45px;
+}
+.hint span {
+    font-size: 20px;
+	padding-left: 37px;
+}
+.game-wrep {
+	background: url(img/q50.jpg);
+	height: 100vh;
+}

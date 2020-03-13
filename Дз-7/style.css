@@ -65,3 +65,11 @@ td {
     color: #920066;
     font-weight: bold;
 }
+
+.wrep {
+	display: flex;
+}
+
+.wrep button {
+	height: 50px;
+}
